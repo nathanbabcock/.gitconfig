@@ -5,7 +5,7 @@
 [core]
 	autocrlf = true
 [alias]
-	cm = commit -m
+	c = commit -am
 	a = add .
 	p = push
 	s = status
