@@ -45,7 +45,7 @@ gpgconf --list-config
 3. Add one line:
 
 ```properties
-max-cache-ttl 999999
+# max-cache-ttl 999999 # Incorrect -- see attempt 4
 ```
 
 ### Attempt 3:
@@ -56,4 +56,12 @@ In `%USERPROFILE%/.bash_profile`:
 
 ```sh
 gpg-agent --max-cache-ttl 999999
+```
+
+### Attempt 4:
+
+Fix syntax in `vi /etc/gnupg/gpgconf.conf`:
+
+```properties
+* gpg-agent max-cache-ttl [default] 999999
 ```
