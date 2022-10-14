@@ -31,7 +31,7 @@ Configure the default pin cache expiration time:
 gpg-agent --default-cache-ttl 999999999
 ```
 
-### Alternate method (if that didn't work):
+### Attempt 2: Alternate method (if that didn't work):
 
 Find the default config location for Git's copy of gpg. It most likely does not exist initially.
 
@@ -46,4 +46,14 @@ gpgconf --list-config
 
 ```properties
 max-cache-ttl 999999
+```
+
+### Attempt 3:
+
+Manually set the parameter every time git bash loads:
+
+In `%USERPROFILE%/.bash_profile`:
+
+```sh
+gpg-agent --max-cache-ttl 999999
 ```
