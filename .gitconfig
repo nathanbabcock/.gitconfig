@@ -14,6 +14,13 @@
 	undo = reset --soft HEAD^
 	ls-alias = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
+  feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; f"
+  fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; f"
+  refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; f"
+  test = "!f() { git add .; git commit -m \"test: $1\"; git push; git status; }; f"
+  style = "!f() { git add .; git commit -m \"style: $1\"; git push; git status; }; f"
+  chore = "!f() { git add .; git commit -m \"chore: $1\"; git push; git status; }; f"
+  perf = "!f() { git add .; git commit -m \"perf: $1\"; git push; git status; }; f"
 [pull]
 	rebase = true
 [push]
