@@ -22,6 +22,7 @@
   style = "!f() { git add .; git commit -m \"style: $1\"; git push; git status; }; f"
   chore = "!f() { git add .; git commit -m \"chore: $1\"; git push; git status; }; f"
   perf = "!f() { git add .; git commit -m \"perf: $1\"; git push; git status; }; f"
+  docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
 [pull]
 	rebase = true
 [push]
