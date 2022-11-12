@@ -23,6 +23,8 @@
   chore = "!f() { git add .; git commit -m \"chore: $1\"; git push; git status; }; f"
   perf = "!f() { git add .; git commit -m \"perf: $1\"; git push; git status; }; f"
   docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
+  build = "!f() { git add .; git commit -m \"build: $1\"; git push; git status; }; f"
+  ci = "!f() { git add .; git commit -m \"ci: $1\"; git push; git status; }; f"
 [pull]
 	rebase = true
 [push]
