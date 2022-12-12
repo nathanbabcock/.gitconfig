@@ -13,7 +13,8 @@
 	st = status
 	up = "!git remote update -p; git merge --ff-only @{u}"
 	undo = reset --soft HEAD^
-  amend = "!git add .; git commit --amend --no-edit; git force"
+  amend = "!git add .; git commit --amend --no-edit; git force; git status"
+  initial = "!git add .; git commit -m \"initial commit \"; git push; git status"
   force = push -f
 	ls-alias = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
