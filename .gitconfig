@@ -30,7 +30,7 @@
   docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
   build = "!f() { git add .; git commit -m \"build: $1\"; git push; git status; }; f"
   ci = "!f() { git add .; git commit -m \"ci: $1\"; git push; git status; }; f"
-  release = "!f() { git chore \"release $1\"; git tag $1; git push --tags }; f"
+  release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
 [pull]
 	rebase = true
 [push]
