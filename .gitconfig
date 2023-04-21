@@ -20,7 +20,7 @@
   force = push -f
 	aliases = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
-  feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; f & git sound-feat"
+  feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
   fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; f"
   refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; f"
   test = "!f() { git add .; git commit -m \"test: $1\"; git push; git status; }; f"
