@@ -22,7 +22,7 @@
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
   fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; git sound-fix & f"
-  refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; f"
+  refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; git sound-refactor & f"
   test = "!f() { git add .; git commit -m \"test: $1\"; git push; git status; }; f"
   style = "!f() { git add .; git commit -m \"style: $1\"; git push; git status; }; f"
   chore = "!f() { git add .; git commit -m \"chore: $1\"; git push; git status; }; f"
@@ -33,6 +33,7 @@
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
   sound-feat = "!powershell.exe -windowstyle hidden -file sounds/valorant-multikill-1.ps1;"
   sound-fix = "!powershell.exe -windowstyle hidden -file sounds/cod-hitmarker.ps1;"
+  sound-refactor = "!powershell.exe -windowstyle hidden -file sounds/angel-choir-ahhhh.ps1;"
 [pull]
 	rebase = true
 [push]
