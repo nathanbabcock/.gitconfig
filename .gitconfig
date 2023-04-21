@@ -6,6 +6,7 @@
 	autocrlf = true
   ignorecase = false
 [alias]
+  # Simple aliases
 	c = commit -am
   cm = commit -m
   co = checkout
@@ -13,13 +14,18 @@
 	p = push
 	s = status
 	st = status
-	up = "!git remote update -p; git merge --ff-only @{u}"
+
+  # Scripts
+  up = "!git remote update -p; git merge --ff-only @{u}"
 	undo = reset --soft HEAD^
   amend = "!git add .; git commit --amend --no-edit; git force; git status"
   initial = "!git add .; git commit -m \"initial commit \"; git push; git status"
   force = push -f
 	aliases = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
+  release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
+
+  # Semantic commits
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
   fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; git sound-fix & f"
   refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; git sound-refactor & f"
@@ -30,7 +36,8 @@
   docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
   build = "!f() { git add .; git commit -m \"build: $1\"; git push; git status; }; f"
   ci = "!f() { git add .; git commit -m \"ci: $1\"; git push; git status; }; f"
-  release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
+
+  # Sound effects
   sound-feat = "!powershell.exe -windowstyle hidden -file sounds/valorant-multikill-1.ps1;"
   sound-fix = "!powershell.exe -windowstyle hidden -file sounds/cod-hitmarker.ps1;"
   sound-refactor = "!powershell.exe -windowstyle hidden -file sounds/angel-choir-ahhhh.ps1;"
