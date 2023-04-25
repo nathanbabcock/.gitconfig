@@ -39,7 +39,7 @@
 
   # Sound effects
   sound-feat = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/valorant-multikill-1.ps1;"
-  sound-fix = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/cod-hitmarker.ps1;"
+  sound-fix = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/warzone-headshot.ps1;"
   sound-refactor = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/angel-choir-ahhhh.ps1;"
 
   get-path = "!f() { \
