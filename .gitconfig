@@ -7,8 +7,9 @@
   ignorecase = false
 [alias]
   # Simple aliases
-	c = commit -am
+	c = commit
   cm = commit -m
+  cam = commit -am
   co = checkout
 	a = add .
 	p = push
