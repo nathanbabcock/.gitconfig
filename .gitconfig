@@ -25,7 +25,7 @@
 	aliases = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
-  mirror = "git push -u mirror main"
+  mirror = "git push mirror main"
 
   # Semantic commits
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
