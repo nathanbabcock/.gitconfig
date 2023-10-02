@@ -1,10 +1,31 @@
 [user]
-	name = nbabcock
+	name = Nathan Babcock
 	email = nathan.r.babcock@gmail.com
 	signingkey = 10BE24B1BAA45E1A
 [core]
-	autocrlf = true
+	autocrlf = false # use .gitattributes to enforce line endings on a per-repo basis as needed
   ignorecase = false
+[init]
+	defaultBranch = main
+[rebase]
+	autoStash = true
+[merge]
+	autoStash = true
+  conflictStyle = diff3
+[checkout]
+	autostash = true
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[rerere]
+  enabled = true
+[pgp]
+	format = ssh
+[commit]
+	gpgsign = true
+[submodule]
+  recurse = true
 [alias]
   # Simple aliases
 	c = commit
@@ -50,14 +71,3 @@
     dir_path=$(dirname "$file_path"); \
     echo "$dir_path"; \
   }; f"
-
-[pull]
-	rebase = true
-[push]
-	autoSetupRemote = true
-[init]
-	defaultBranch = main
-[pgp]
-	format = ssh
-[commit]
-	gpgsign = true
