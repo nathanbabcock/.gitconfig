@@ -15,7 +15,7 @@
 [checkout]
 	autostash = true
 [pull]
-	rebase = true
+	rebase = false
 [push]
 	autoSetupRemote = true
 [rerere]
