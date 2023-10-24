@@ -5,6 +5,10 @@
 [core]
 	autocrlf = false # use .gitattributes to enforce line endings on a per-repo basis as needed
   ignorecase = false
+
+  # Configure 1Password SSH agent
+  # https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client
+  sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [init]
 	defaultBranch = main
 [rebase]
