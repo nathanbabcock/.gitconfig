@@ -26,6 +26,9 @@
 	gpgsign = true
 [submodule]
   recurse = true
+[diff]
+  colormoved = "default"
+  colormovedws = "allow-indentation-change"
 [alias]
   # Simple aliases
 	c = commit
