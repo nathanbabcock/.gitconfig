@@ -16,7 +16,11 @@ Include the `.gitconfig` in this repo in the machine's global config:
 
 Commands added with `git config --global` will be written into the global `.gitconfig`, not the shared repo version. They will need to be manually transferred over, committed, and pushed.
 
-## Troubleshooting GPG-agent
+## Troubleshooting GPG-agent (old)
+
+> ⚠ This section is outdated; [1Password SSH Agent](https://developer.1password.com/docs/ssh/get-started/) is now used instead.
+
+---
 
 Don't use gpg4win or Kleopatra, use Git's bundled `gpg.exe` found in `%ProgramFiles%\Git\usr\bin`
 
