@@ -54,6 +54,7 @@
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
   mirror = "!git push mirror main"
+  last = "!git log -1 --stat"
 
   # Semantic commits
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
