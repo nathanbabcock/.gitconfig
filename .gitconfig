@@ -1,7 +1,7 @@
 [user]
 	name = nbabcock
 	email = nathan.r.babcock@gmail.com
-	signingkey = 10BE24B1BAA45E1A
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqd7Z6PvV3yqH298oTcit7Ta6WRop3I94yRaRdmA4mm
 [core]
 	autocrlf = false # use .gitattributes to enforce line endings on a per-repo basis as needed
   ignorecase = false
@@ -26,6 +26,10 @@
   enabled = true
 [pgp]
 	format = ssh
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "C:/Users/Nathan/AppData/Local/1Password/app/8/op-ssh-sign.exe"
 [commit]
 	gpgsign = true
 [submodule]
