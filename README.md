@@ -18,6 +18,8 @@ Commands added with `git config --global` will be written into the global `.gitc
 
 ## 1Password SSH agent integration
 
+### Git config
+
 The local `~/.gitconfig` on each computer should specify the path to the
   signing tool. Go to "Configure" on an SSH key inside 1Password to get the
   correct path. The other settings are shared in the global `.gitconfig` in this repo.
@@ -26,6 +28,8 @@ The local `~/.gitconfig` on each computer should specify the path to the
 [gpg "ssh"]
   program = "C:/Users/nbabcock/AppData/Local/1Password/app/8/op-ssh-sign.exe"
 ```
+
+### SSH config
 
 For using multiple Github accounts with SSH keys, you have to edit your
 `~/.ssh/config` file to differentiate the hosts. For example:
@@ -53,6 +57,11 @@ git remote set-url origin personal-github:nathanbabcock/.gitconfig.git
 ```
 
 [Reference](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts)
+
+### Github settings
+
+In Github, add the SSH key **twice**; once as an authentication key, and once as
+a signing key (new as of Git 2.34 in October 2022).
 
 ## Troubleshooting GPG-agent (old)
 
