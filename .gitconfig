@@ -1,37 +1,38 @@
 [user]
-	name = nbabcock
-	email = nathan.r.babcock@gmail.com
+  name = nbabcock
+  email = nathan.r.babcock@gmail.com
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqd7Z6PvV3yqH298oTcit7Ta6WRop3I94yRaRdmA4mm
 [core]
-	autocrlf = false # use .gitattributes to enforce line endings on a per-repo basis as needed
+  autocrlf = false # use .gitattributes to enforce line endings on a per-repo basis as needed
   ignorecase = false
 
   # Configure 1Password SSH agent
   # https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client
   sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
-[init]
-	defaultBranch = main
-[rebase]
-	autoStash = true
-[merge]
-	autoStash = true
-  conflictStyle = diff3
-[checkout]
-	autostash = true
-[pull]
-	rebase = false
-[push]
-	autoSetupRemote = true
-[rerere]
-  enabled = true
 [pgp]
-	format = ssh
+  format = ssh
 [gpg]
   format = ssh
 [gpg "ssh"]
-  program = "C:/Users/Nathan/AppData/Local/1Password/app/8/op-ssh-sign.exe"
+  # program should be overriden in ~/.gitconfig on each host
+  program = "C:/Users/nbabcock/AppData/Local/1Password/app/8/op-ssh-sign.exe"
 [commit]
-	gpgsign = true
+  gpgsign = true
+[init]
+  defaultBranch = main
+[rebase]
+  autoStash = true
+[merge]
+  autoStash = true
+  conflictStyle = diff3
+[checkout]
+  autostash = true
+[pull]
+  rebase = false
+[push]
+  autoSetupRemote = true
+[rerere]
+  enabled = true
 [submodule]
   recurse = true
 [diff]
@@ -39,22 +40,22 @@
   colormovedws = "allow-indentation-change"
 [alias]
   # Simple aliases
-	c = commit
+  c = commit
   cm = commit -m
   cam = commit -am
   co = checkout
-	a = add .
-	p = push
-	s = status
-	st = status
+  a = add .
+  p = push
+  s = status
+  st = status
 
   # Scripts
   up = "!git remote update -p; git merge --ff-only @{u}"
-	undo = reset --soft HEAD^
+  undo = reset --soft HEAD^
   amend = "!git add .; git commit --amend --no-edit; git force; git status"
   initial = "!git add .; git commit -m \"initial commit \"; git push; git status"
   force = push -f
-	aliases = config --get-regexp '^alias\\.'
+  aliases = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
   mirror = "!git push mirror main"
