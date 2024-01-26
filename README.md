@@ -35,28 +35,21 @@ For using multiple Github accounts with SSH keys, you have to edit your
 `~/.ssh/config` file to differentiate the hosts. For example:
 
 ```ini
-# Personal GitHub
-Host personal-github
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/personal_gihub.pub
-  IdentitiesOnly yes
+# NOCAP Github
+Match host github.com exec "git config user.email | grep -q nathan@nocapinc.com"
+    IdentityFile ~/.ssh/nocap_github.pub
 
-# Work GitHub
-Host nocap-github
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/nocap_github.pub
-  IdentitiesOnly yes
+# Personal Github
+Match host github.com exec "git config user.email | grep -vq nathan@nocapinc.com"
+    IdentityFile ~/.ssh/personal_github.pub
 ```
 
-Then use the custom `Host` name instead of `git@github.com`:
+Grep args:
 
-```bash
-git remote set-url origin personal-github:nathanbabcock/.gitconfig.git
-```
+- `-q`: quiet (only return exit code)
+- `-v`: invert match
 
-[Reference](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts)
+This a slightly more advanced method than what's recommended in the [1password docs](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts). The `Match ... exec` approach doesn't require changing git remote URLs, which can break other git extensions which read remotes.
 
 ### Github settings
 
