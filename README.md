@@ -1,6 +1,6 @@
 # .gitconfig
 
-## Installation
+## Installation 🏗️
 
 Include the `.gitconfig` in this repo in the machine's global config:
 
@@ -12,11 +12,18 @@ Include the `.gitconfig` in this repo in the machine's global config:
   path = f:/git/.gitconfig/.gitconfig
 ```
 
-## Limitations
+Also add per-host settings for SSH commit signing ([see below 👇](#git-config)).
+
+### Limitations
 
 Commands added with `git config --global` will be written into the global `.gitconfig`, not the shared repo version. They will need to be manually transferred over, committed, and pushed.
 
-## 1Password SSH agent integration
+## Hooks 🪝
+
+Some useful [per-repo Git hooks](https://github.com/nathanbabcock/nbabcock-toolkit/tree/master/src/git/hooks) are in [`nbabcock-toolkit`](https://github.com/nathanbabcock/nbabcock-toolkit).
+
+
+## 1Password SSH agent integration 🔐
 
 ### Git config
 
@@ -49,12 +56,12 @@ Grep args:
 - `-q`: quiet (only return exit code)
 - `-v`: invert match
 
-This a slightly more advanced method than what's recommended in the [1password docs](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts). The `Match ... exec` approach doesn't require changing git remote URLs, which can break other git extensions which read remotes.
+This a slightly more advanced method than [what's recommended in the 1password docs](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts). The `Match ... exec` approach doesn't require changing Git remote URLs, which can break other Git extensions which read remotes.
 
 ### Github settings
 
 In Github, add the SSH key **twice**; once as an authentication key, and once as
-a signing key (new as of Git 2.34 in October 2022).
+a signing key (SSH signing is new as of Git 2.34 in October 2022).
 
 ## Troubleshooting GPG-agent (old)
 
