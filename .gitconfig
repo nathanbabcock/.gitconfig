@@ -33,8 +33,8 @@
   autoSetupRemote = true
 [rerere]
   enabled = true
-[submodule]
-  recurse = true
+#[submodule]
+#  recurse = true
 [diff]
   colormoved = "default"
   colormovedws = "allow-indentation-change"
@@ -60,6 +60,7 @@
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
   mirror = "!git push mirror main"
   last = "!git log -1 --stat"
+  diff-grep = "!echo \"👉 Try invoking directly from bash via git-diff-grep\""
 
   # Semantic commits
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"

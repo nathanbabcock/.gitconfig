@@ -14,14 +14,9 @@ Include the `.gitconfig` in this repo in the machine's global config:
 
 Also add per-host settings for SSH commit signing ([see below 👇](#git-config)).
 
-### Limitations
-
-Commands added with `git config --global` will be written into the global `.gitconfig`, not the shared repo version. They will need to be manually transferred over, committed, and pushed.
-
 ## Hooks 🪝
 
 Some useful [per-repo Git hooks](https://github.com/nathanbabcock/nbabcock-toolkit/tree/master/src/git/hooks) are in [`nbabcock-toolkit`](https://github.com/nathanbabcock/nbabcock-toolkit).
-
 
 ## 1Password SSH agent integration 🔐
 
