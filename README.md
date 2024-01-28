@@ -18,6 +18,14 @@ Also add per-host settings for SSH commit signing ([see below 👇](#git-config)
 
 Some useful [per-repo Git hooks](https://github.com/nathanbabcock/nbabcock-toolkit/tree/master/src/git/hooks) are in [`nbabcock-toolkit`](https://github.com/nathanbabcock/nbabcock-toolkit).
 
+## Commit Sounds 🔊
+
+Copy and paste the contents of [`git/hooks`](./git/hooks) into a repo's `.git/hooks`, or point the repo's `core.hooksPath` to the folder in this repo.
+
+```sh
+git config --local core.hooksPath f:/git/.gitconfig/git/hooks
+```
+
 ## 1Password SSH agent integration 🔐
 
 ### Git config

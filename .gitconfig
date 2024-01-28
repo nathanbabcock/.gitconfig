@@ -63,9 +63,9 @@
   diff-grep = "!echo \"👉 Try invoking directly from bash via git-diff-grep\""
 
   # Semantic commits
-  feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; git sound-feat & f"
-  fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; git sound-fix & f"
-  refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; git sound-refactor & f"
+  feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; f"
+  fix = "!f() { git add .; git commit -m \"fix: $1\"; git push; git status; }; f"
+  refactor = "!f() { git add .; git commit -m \"refactor: $1\"; git push; git status; }; f"
   test = "!f() { git add .; git commit -m \"test: $1\"; git push; git status; }; f"
   style = "!f() { git add .; git commit -m \"style: $1\"; git push; git status; }; f"
   chore = "!f() { git add .; git commit -m \"chore: $1\"; git push; git status; }; f"
@@ -73,15 +73,3 @@
   docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
   build = "!f() { git add .; git commit -m \"build: $1\"; git push; git status; }; f"
   ci = "!f() { git add .; git commit -m \"ci: $1\"; git push; git status; }; f"
-
-  # Sound effects
-  sound-feat = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/valorant-multikill-1.ps1;"
-  sound-fix = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/warzone-headshot.ps1;"
-  sound-refactor = "!powershell.exe -windowstyle hidden -file $(git get-path)/sounds/angel-choir-ahhhh.ps1;"
-
-  get-path = "!f() { \
-    input=\"$(git config --list --show-origin | grep alias.get-path)\"; \
-    file_path=$(echo "$input" | awk '{print $1}' | sed 's/^file://'); \
-    dir_path=$(dirname "$file_path"); \
-    echo "$dir_path"; \
-  }; f"
