@@ -26,6 +26,8 @@ Copy and paste the contents of [`git/hooks`](./git/hooks) into a repo's `.git/ho
 git config --local core.hooksPath f:/git/.gitconfig/git/hooks
 ```
 
+All sounds from freesound.org and Pixabay, licensed for noncommercial use.
+
 ## 1Password SSH agent integration 🔐
 
 ### Git config
