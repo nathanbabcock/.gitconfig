@@ -61,11 +61,12 @@ Grep args:
 - `-q`: quiet (only return exit code)
 - `-v`: invert match
 
-Then, make sure `user.email` is set to the correct value on a per-repo basis,
+Then, make sure `user.email` and `user.signingkey` is set to the correct value on a per-repo basis,
 e.g.:
 
 ```bash
 git config --local user.email "nathan@nocapinc.com"
+git config --local user.signingkey "...<copied from 1password>..."
 ```
 
 This a slightly more advanced method than [what's recommended in the 1password docs](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts). The `Match ... exec` approach doesn't require changing Git remote URLs, which can break other Git extensions which read remotes.
