@@ -46,8 +46,8 @@
   co = checkout
   a = add .
   p = push
-  s = status
   st = status
+  sw = switch
 
   # Scripts
   up = "!git remote update -p; git merge --ff-only @{u}"
