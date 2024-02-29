@@ -54,7 +54,7 @@
   undo = reset --soft HEAD^
   amend = "!git add .; git commit --amend --no-edit; git force; git status"
   initial = "!git add .; git commit -m \"initial commit \"; git push; git status"
-  force = push -f
+  force = push --force-with-lease
   aliases = config --get-regexp '^alias\\.'
   lazy = "!f() { git add .; git commit -m \"$1\"; git push; git status; }; f"
   release = "!f() { git chore \"release $1\"; git tag $1; git push --tags; }; f"
