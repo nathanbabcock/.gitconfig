@@ -61,6 +61,7 @@
   mirror = "!git push mirror main"
   last = "!git log -1 --stat"
   diff-grep = "!echo \"👉 Try invoking directly from bash via git-diff-grep\""
+  graph = log --oneline --decorate --graph --all
 
   # Semantic commits
   feat = "!f() { git add .; git commit -m \"feat: $1\"; git push; git status; }; f"
