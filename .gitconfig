@@ -25,6 +25,7 @@
 [merge]
   autoStash = true
   conflictStyle = diff3
+  renormalize = true
 [checkout]
   autostash = true
 [pull]
@@ -38,6 +39,14 @@
 [diff]
   colormoved = "default"
   colormovedws = "allow-indentation-change"
+  external = difft
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true
 [alias]
   # Simple aliases
   c = commit
