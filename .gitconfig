@@ -9,6 +9,13 @@
   # Configure 1Password SSH agent
   # https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client
   sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+  packedGitLimit = 512m
+  packedGitWindowSize = 512m
+  compression = 9
+[pack]
+  deltaCacheSize = 2047m
+  packSizeLimit = 2047m
+  windowMemory = 2047m
 [pgp]
   format = ssh
 [gpg]
