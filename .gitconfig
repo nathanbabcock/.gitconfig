@@ -20,9 +20,6 @@
   format = ssh
 [gpg]
   format = ssh
-[gpg "ssh"]
-  # program should be overriden in ~/.gitconfig on each host
-  program = "C:/Users/nbabcock/AppData/Local/1Password/app/8/op-ssh-sign.exe"
 [commit]
   gpgsign = true
 [init]
