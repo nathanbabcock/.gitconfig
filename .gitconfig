@@ -61,6 +61,7 @@
   p = push
   st = status
   sw = switch
+  wt = worktree
 
   # Scripts
   up = "!git remote update -p; git merge --ff-only @{u}"
