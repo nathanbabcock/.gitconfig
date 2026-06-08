@@ -63,7 +63,7 @@
   wt = worktree
 
   # switch + fetch if initial switch fails
-  sw = "!f() { git switch \"$1\" 2>/dev/null || { git fetch && git switch \"$1\"; }; }; f"
+  sw = "!f() { git switch \"$@\" 2>/dev/null || { git fetch && git switch \"$@\"; }; }; f"
 
   # Scripts
   up = "!git remote update -p; git merge --ff-only @{u}"
