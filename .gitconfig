@@ -90,3 +90,11 @@
   docs = "!f() { git add .; git commit -m \"docs: $1\"; git push; git status; }; f"
   build = "!f() { git add .; git commit -m \"build: $1\"; git push; git status; }; f"
   ci = "!f() { git add .; git commit -m \"ci: $1\"; git push; git status; }; f"
+[url "https://github.com/anthropics/"]
+  # Workaround: Claude Code's plugin marketplace refresh uses an SSH remote,
+  # which triggers repeated 1Password SSH agent prompts. Force HTTPS instead.
+  # https://github.com/anthropics/claude-code/issues/14485
+  # https://github.com/anthropics/claude-code/issues/17537
+  # Safe to remove once fixed upstream.
+  insteadOf = git@github.com:anthropics/
+  insteadOf = ssh://git@github.com/anthropics/
